@@ -6,8 +6,9 @@ import React from "react";
  * @param {string} description - 프로젝트의 설명
  * @param {string} image - 프로젝트의 이미지 URL (선택적)
  * @param {string} link - 프로젝트의 외부 링크 URL (선택적)
+ * @param {ReactNode} component - 추가 계산기
  */
-const ProjectCard = ({ title, description, image, link }) => {
+const ProjectCard = ({ title, description, image, link, component }) => {
   return (
     <div className="project-card">
       <h3>{title}</h3>
@@ -18,6 +19,13 @@ const ProjectCard = ({ title, description, image, link }) => {
         </div>
       )}
       <p>{description}</p>
+
+      {/*추가 계산기*/}
+      {component && (
+        <div className="project-component">
+          {component}
+          </div>
+      )}
       {/* 프로젝트 링크가 있는 경우 버튼 표시 */}
       {link && (
         <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">

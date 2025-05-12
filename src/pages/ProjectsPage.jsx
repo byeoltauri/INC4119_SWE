@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import sampleImage from "../assets/calcu.png";
+import Calculator from "./Calculator/Calculator";
+import DiceRoller from "../components/DiceRoller";
 
 /**
  * 프로젝트 페이지 컴포넌트
@@ -11,11 +12,17 @@ const ProjectsPage = () => {
     {
       title: "나의 프로젝트1",
       description: "React를 사용하여 만든 계산기 애플리케이션",
-      image: sampleImage,
+      component: (
+        <div className="MainCss">
+        <h1 className="ID">2021112072 이도훈</h1>
+        <Calculator />
+        </div>
+      ),
     },
     {
       title: "나의 프로젝트2",
-      description: "캡스톤 프로젝트에서의 딥러닝 기반 영상 분류 시스템",
+      description: "주사위 굴리기",
+      component: <DiceRoller />
     },
     {
       title: "나의 프로젝트3",
@@ -35,6 +42,7 @@ const ProjectsPage = () => {
             description={project.description}
             image={project.image}
             link={project.link}
+            component={project.component}
           />
         ))}
       </div>

@@ -233,3 +233,153 @@
   padding: 1rem;
   margin-top: auto;
 }
+
+/*추가 계산기 CSS*/
+
+.MainCss {
+  margin: 40px auto;
+  padding: 20px;
+  width: 300px;
+  border: 1px, solid, gray;
+}
+
+.ID {
+  text-align: center;
+}
+
+.DisplayCss {
+  background-color: black;
+  height: 40px;
+  padding: 10px;
+  font-size: 15px; 
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.input {
+  color: white;
+}
+
+.result {
+  color: greenyellow;
+}
+
+.row {
+  text-align: center;
+}
+
+.btn {
+  margin: 1%;
+  height: 25%;
+  width: 9%;
+  background-color: white;
+  border: 1px solid darkgray;
+}
+
+.ac {
+  background-color: red;
+  height: 9%;
+  width: 30%;
+  margin-left: 3px;
+  margin-right: 6px;
+}
+
+/*추가 주사위*/
+
+.dice-roller {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dice-roller h2 {
+  margin-bottom: 20px;
+}
+
+.dice-roller label {
+  margin-right: 10px;
+}
+
+.dice-roller input,
+.dice-roller select {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.dice-roller button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dice-roller button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@keyframes diceRoll {
+  0% {
+    transform: rotate(0deg) translateY(0) rotateX(0deg);
+    opacity: 0.3;
+  }
+  10% {
+    transform: rotate(30deg) translateY(-20px) rotateX(45deg);
+    opacity: 1;
+  }
+  20% {
+    transform: rotate(60deg) translateY(10px) rotateX(90deg);
+  }
+  30% {
+    transform: rotate(90deg) translateY(-10px) rotateX(135deg);
+  }
+  40% {
+    transform: rotate(120deg) translateY(5px) rotateX(180deg);
+  }
+  50% {
+    transform: rotate(180deg) translateY(0) rotateX(225deg);
+  }
+  60% {
+    transform: rotate(210deg) translateY(-5px) rotateX(270deg);
+  }
+  70% {
+    transform: rotate(240deg) translateY(10px) rotateX(315deg);
+  }
+  80% {
+    transform: rotate(270deg) translateY(-5px) rotateX(360deg);
+  }
+  90% {
+    transform: rotate(300deg) translateY(0) rotateX(405deg);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0) rotateX(450deg);
+    opacity: 1;
+  }
+}
+
+.dice-roller .dice-animation {
+  font-size: 50px;
+  text-align: center;
+  animation: diceRoll 1s ease-in-out;
+  display: inline-block;
+}
+
+
+.dice-roller .dice-animation {
+  font-size: 50px;
+  text-align: center;
+  animation: diceRoll 1s ease-in-out;
+  display: inline-block;
+}
+
+
+.dice-roller .dice-results {
+  margin-top: 20px;
+  font-size: 18px;
+}
